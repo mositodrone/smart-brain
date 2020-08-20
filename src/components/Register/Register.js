@@ -22,9 +22,9 @@ class Register extends React.Component {
     this.setState({password: event.target.value})
   }
 
-// 'https://hidden-wave-38166.herokuapp.com
+// 'https://hidden-wave-38166.herokuapp.com'
   onSubmitSignIn = () => {
-    fetch('https://hidden-wave-38166.herokuapp.com/register', {
+    fetch('https://hidden-wave-38166.herokuapp.com', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

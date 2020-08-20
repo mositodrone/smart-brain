@@ -17,10 +17,10 @@ class Signin extends React.Component {
     this.setState({signInPassword: event.target.value})
   }
 
-// 'https://hidden-wave-38166.herokuapp.com
+// 'https://hidden-wave-38166.herokuapp.com'
 
   onSubmitSignIn = () => {
-    fetch('https://hidden-wave-38166.herokuapp.com/signin', {
+    fetch('https://hidden-wave-38166.herokuapp.com', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -63,7 +63,7 @@ class Signin extends React.Component {
                   name="password"
                   id="password"
                   onChange={this.onPasswordChange}
-                  onKeyPress={this.onSubmitSignIn}
+                  ref={fileInput => this.fileInput = fileInput}
                 />
               </div>
             </fieldset>
